@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HW1Week5
+{
+    class index
+    {
+        @model List<Booking> 
+        <html>
+            <head>
+                <title>Booking Information</title>
+            </head>
+            <body>
+                <h1> Booking Information</h1>
+                <table border="1">
+                    <tr>
+                        <th> Booking ID</th>
+                        <th> Name </th>
+                        <th> Booking Date</th>
+                        <th> Booking Time</th>
+                    </tr>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@Booking.BookingID</td>
+                <td>@Booking.Name</td>
+                <td>@Booking.BookingDate</td>
+                <td>@Booking.BookingTime</td>
+
+            </tr>
+        }
+    </table>
+            </body>
+        </html>
+            
+    }
+}
